@@ -8,7 +8,7 @@ jobs:
         env:
           CONTAINS_FUNC: ${{ contains('Hello', 'ell') }}
           STARTS_WWITH_FUNC: ${{ startsWith('Hello', 'He') }}
-          END_WWITH_FUNC: ${{ endWith('Hello', 'lo') }}
+          ENDS_WWITH_FUNC: ${{ endsWith('Hello', 'lo') }}
           FORMAT_FUNC: ${{ format('{0}, {1}', 'Hi', 'world') }}
           JOIN_FUNC: ${{ join(github.event.*.html_url, ',') }}
       - run: echo "${CONTEXT}"
